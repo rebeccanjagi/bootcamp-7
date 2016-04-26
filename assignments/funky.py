@@ -14,11 +14,11 @@ def Funky(a, b):
 			return a+b
 
 		elif type(a) and type(b) == list:
-			#adds the values of a list
+			#concatenates the values of the lists
 			return a+b
 
 		elif type(a) and type(b) == dict:
-			#adds the values of a dictionary
+			#adds the values of the dictionaries
 			list_a = a.values()
 			list_b = b.values()
 			return list_a + list_b
