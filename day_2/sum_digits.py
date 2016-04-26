@@ -14,7 +14,6 @@ def sum_digits(A):
 		for char_value in str_value:
 			int_value += int(char_value)
 
-	print int_value
+	return int_value
 
-sum_digits([10,30,45])
 
