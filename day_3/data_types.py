@@ -21,8 +21,9 @@ def data_type(x):
 		elif type(x) == long: #Checks if x is long
 			return "long"
 		else:
-			return "Invalid data type" 
+			raise Exception # return the exception thrown 
 
 	except Exception, e:
 		return "Invalid data type" #handles any exception
-	
+
+
