@@ -1,17 +1,5 @@
-class Person:
-	people_count = 0 #class variable. Accessed by classname.variable or object.variable
-	def __init__(self, name, age):
-		self.name = name #instance variable. Accessed by object.variable and NOt by classname.variable
-		self.age = age
-		Person.people_count += 1
-
-	def __repr__(self):
-		return "{}, {}".format(self.name,self.age)
-	
-	def say_hello(self):
-		return "Hello, i am {} and {} years old".format(self.name, self.age)
-
-
+from person import Person
+from kenyan import Kenyan
 
 p = Person('Becks',2)
 p2 = Person('Lorna',30)
@@ -25,8 +13,18 @@ b=[]
 for name, age in a:
 	person =Person(name, age)
 	b.append(person)
+
 print b
 
-for tuple_x in b:
-	for o,p in tuple_x:
-		print "{} said Hello!".format(o)
+for w in b:
+	print w.say_hello()
+
+
+
+k = Kenyan('Jane', 20)
+
+k.probe(True)
+
+print "Is {} corrupt? {}".format(k.name, k.is_corrupt())
+
+print k.say_hello()
