@@ -24,6 +24,6 @@ def data_type(x):
 			raise Exception # return the exception thrown 
 
 	except Exception, e:
-		return "Invalid data type" #handles any exception
+		return "Data type not defined in this function" #handles any exception
 
 
