@@ -6,24 +6,19 @@ class PrimeChecker(object):
 
 	'''
 
-	def __init__(self, item1):
+	def __init__(self, item1=""):
 	 	self.item1 = item1
 
 	def is_prime(self):
 
-		if self.item1 is not '':
+		if self.item1 <> '':
 			x = int(self.item1)
 			if x < 2:
 				return True
 			else:
-				if x > 1:
-					if x % x == 0:
-						return True
-		return False
-		
-			
-
-p = PrimeChecker('3')
-print p.is_prime()
-
-
+				for i in range(2,x):
+					if x % i == 0:
+						return False
+			return True
+		else:
+			return False
