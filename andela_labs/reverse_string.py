@@ -6,7 +6,7 @@ def reverse_string(string):
 
 	'''
 
-
+	rev_string = ""
 	if string is not "":
 		for b in string:
 			rev_string = b+rev_string
@@ -15,3 +15,5 @@ def reverse_string(string):
 		return rev_string
 	else:
 		return None
+
+		
