@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 def words(input):
 	'''
 	A function that counts the occurencies of words in a string 
@@ -10,9 +9,8 @@ def words(input):
 		free: 1
 
 	'''
-	
-	list_version = input.split() #convert a string into a list
-	length_of_input = len(list_version)
+
+	list_version = input.split()
 	result = {}
 
 	for word in list_version:
@@ -20,6 +18,12 @@ def words(input):
 		for word_2 in list_version:
 			if word == word_2:
 				count += 1
+		try:
+			word = int(word)
+		except Exception, e:
+			word = word
+			
 		result[word] = count
 	return result
+
 
